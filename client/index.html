@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Battle Navy</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Lobby Scene (HTML is fine here — above canvas) -->
+    <div id="lobby-scene" class="scene">
+      <h1 class="title">BATTLE NAVY</h1>
+      <div class="lobby-card">
+        <input
+          type="text"
+          id="nickname-input"
+          class="input"
+          placeholder="Tu nombre (1-20 caracteres)"
+          maxlength="20"
+        />
+        <button id="join-btn" class="btn btn-primary">Buscar Partida</button>
+        <button id="leave-btn" class="btn btn-secondary" style="display:none">Salir de la cola</button>
+        <div id="queue-status" class="status-text"></div>
+        <div id="error-message" class="error-text"></div>
+      </div>
+      <div class="footer-text">Hunde todos los barcos enemigos para ganar</div>
+    </div>
+
+    <!-- Notification overlay (HTML for easy positioning) -->
+    <div id="notification" class="notification"></div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
